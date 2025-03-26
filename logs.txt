@@ -1,0 +1,34 @@
+* 00e3e47 Final commit
+| *   f7b0f6a Merge pull request #13 from Sara-mih/1-remove-a-task-by-name
+| |\  
+| |/  
+|/|   
+* | 5e407cc task 1
+|/  
+*   24a3314 Merge pull request #12 from Sara-mih/8-mark-a-task-as-completed-by-name
+|\  
+| *   f825dbf Merge branch 'master' into 8-mark-a-task-as-completed-by-name
+| |\  
+| |/  
+|/|   
+| | * 186aaef resen e
+| | * 3ba6563 resen konflikt
+| |/| 
+| |/  
+|/|   
+* |   7890103 Merge pull request #11 from Sara-mih/7-count-tasks-per-category
+|\ \  
+| * \   ccf7dad Merge remote-tracking branch 'origin/master' into 7-count-tasks-per-category
+| |\ \  
+| |/ /  
+|/| |   
+* | |   728b13a Merge pull request #10 from Sara-mih/2-find-all-completed-tasks
+|\ \ \  
+| * | | 922c95b Completed task funckija
+|/ / /  
+| * / 6cac0dd Complete funcija za 7 task
+|/ /  
+| * c476d3f Done for 8th issue
+|/  
+* 1ae1438 Add starter code
+* a4bf069 Initial commit
