@@ -68,10 +68,13 @@ class TaskManager {
     }
 
     // 2. Find all completed tasks
-    public List<Task> getCompletedTasks() {
-        // TODO: Implement logic to return completed tasks
-        return new ArrayList<>();
-    }
+	public List<Task> getCompletedTasks() {
+    List<Task> completedTasks = new ArrayList<>();
+    for (Task task : tasks) {
+        if (task.isCompleted()) {
+            completedTasks.add(task);
+        }
+    }	    
 
     // 3. List tasks sorted by name
     public void sortTasksByName() {
@@ -97,8 +100,12 @@ class TaskManager {
 
     // 7. Count tasks per category
     public Map<String, Integer> countTasksPerCategory() {
-        // TODO: Implement counting logic
-        return new HashMap<>();
+        Map<String, Integer> categoryCount = new HashMap<>();
+        for (Task task : tasks) {
+            String category = task.getCategory();
+            categoryCount.put(category, categoryCount.getOrDefault(category, 0) + 1);
+        }
+        return categoryCount;
     }
 
     // 8. Mark a task as completed by name
@@ -131,9 +138,24 @@ public class SI2025Lab1Main {
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
 
         // MISSING: Calls to the new methods that will be implemented
+	
+
+        System.out.println("Completed Tasks:");
+        for (Task task : manager.getCompletedTasks()) {
+            System.out.println(task);
+        }
 
         manager.printTasks();
 
+
 	manager.markTaskCompleted("Write report");
+
+	System.out.println("\nTask count per category:");
+        Map<String, Integer> categoryCounts = manager.countTasksPerCategory();
+        for (Map.Entry<String, Integer> entry : categoryCounts.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+
     }
+	
 }
