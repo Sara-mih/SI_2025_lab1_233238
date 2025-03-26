@@ -64,8 +64,8 @@ class TaskManager {
 
     // 1. Remove a task by name
     public void removeTask(String name) {
-        // TODO: Implement removal logic
-    }
+    tasks.removeIf(task -> task.getName().equals(name));
+}
 
     // 2. Find all completed tasks
 	public List<Task> getCompletedTasks() {
@@ -155,6 +155,8 @@ public class SI2025Lab1Main {
         for (Map.Entry<String, Integer> entry : categoryCounts.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
+        
+        manager.removeTask("Buy groceries");
 
     }
 	
